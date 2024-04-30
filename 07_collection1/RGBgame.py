@@ -15,18 +15,17 @@ def stop_game():
     global toggle
     toggle = False
     print(toggle)
-    if LED.color == (0,1,0):
+    if LED.color == (1,0,1):
         for _ in range(5):
-            LED.off()
+            set_color(0,0,0)
             time.sleep(0.5)
-            LED.on()
+            set_color(0,1,0)
             time.sleep(0.5)
     else:
-        set_color(1,0,0)
         for _ in range(5):
-            LED.off()
+            set_color(0,0,0)
             time.sleep(0.5)
-            LED.on()
+            set_color(1,0,0)
             time.sleep(0.5)
 
 def cycle():
